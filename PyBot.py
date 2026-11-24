@@ -6,8 +6,10 @@ def response(user_input):
         return "I'm doing well,thank you! How are you?"
     elif text == "bye" or text == "exit" or text == "goodbye":
         return "Goodbye! It was nice talking and being of assistance today! Have a lovely day!"
-    elif text == "what is:" or text == "what does AIU offer?" or text == "what does AIU charge per semester?":
-        return "AIU offers a variety of programs in fields such as Technology, Theology, Business, and Teaching"
+    elif (text == "what is aiu?" or 
+          text == "what courses does aiu offer?" or 
+          text == "what is the tuition fee for aiu?"):
+        return ("AIU offers a variety of programs in fields like Technology,Business,Theology,and Education")
     elif text == "help":
         return "I can help you with all the information you need about AIU."
 def main():
@@ -23,6 +25,7 @@ def main():
             continue
 if __name__ == "__main__":
     main()
-    
+        
+        
     
     
