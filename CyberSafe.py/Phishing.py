@@ -78,15 +78,28 @@ def risk_assessment():
     print("\nCYBERSECURITY RISK ASSESSMENT")
     print("Please answer the following questions to assess your cybersecurity risk:")
     # Add questions and logic for risk assessment
-while True:
-    answer = input("Do you want to continue? (yes/no): ").lower()
-    if answer == "yes":
+def main():
+    while True:
         welcome()
         menu()
-        choice = input("Enter your choice (1-5)")
-        print("\n Thank you for using Cybersafe. Stay safe online!")
-    else:
-        print("Goodbye!")
-        break
-    if __name__ == "__main__":
-        cybersafe()
+
+        choice = input("\nEnter your choice (1-5): ")
+        if choice == "1":
+            print("\nChat with Cybersafe.")
+        elif choice == "2":
+            suspicious_message_checker()
+        elif choice == "3":
+            print("\nSuspicious link checker .")
+        elif choice == "4":
+            risk_assessment()
+        elif choice == "5":
+            cybersecurity_advice()
+        else:
+            print("Invalid choice. Please enter a number between 1 and 5.")
+        answer = input("\nWould you like to perform another action? (yes/no): ")
+        if answer.lower() != "yes":
+            print("Thank you for using Cybersafe. Stay safe online!")
+            break
+
+        if __name__ == "__main__":
+            main()
